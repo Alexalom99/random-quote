@@ -29,3 +29,15 @@ const quotes = [
         author: " Tyne Daly"
     }
 ];
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function getRandomQuote() {
+    integer = getRandomInt(5);
+    document.querySelector(".quote--text").textContent = quotes[integer].quote;
+}
+
+document.querySelector("#generate-quote").onclick = getRandomQuote;
+  
